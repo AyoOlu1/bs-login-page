@@ -8,19 +8,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <link rel="stylesheet" href="./lib/bootstrap.min.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body class="d-flex align-items-center justify-content-center">
-    <div class="container-sm d-flex flex-column align-items-center">
+    <!-- make body flex container to center the div below-->
+    <div class="d-flex flex-column align-items-center shadow p-5">
       <h1 class="fw-bold mb-3">Welcome</h1>
-      <div class="mb-3 border border-dark rounded-pill px-2 py-1">
-        <i>G</i>
+      <button
+        class="btn btn-light mb-3 border border-dark rounded-pill px-2 py-1"
+      >
+        <span class="fw-bold">G</span>
         <span>Sign in with Google</span>
-      </div>
+      </button>
 
       <form>
         <div class="mb-3">
@@ -46,13 +50,30 @@
             id="exampleInputPassword1"
           />
         </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-          <label class="form-check-label" for="exampleCheck1"
-            >Remember me</label
-          >
+
+        <!-- forgot password  -->
+        <div class="form-group clearfix d-flex justify-content-between mb-3">
+          <div class="custom-control custom-checkbox float-left">
+            <input
+              type="checkbox"
+              class="custom-control-input"
+              id="customCheck"
+              name="rem"
+            />
+            <label class="custom-control-label" for="customCheck"
+              >Remember me</label
+            >
+          </div>
+          <div class="forgot">
+            <a href="#" id="forgot-link">Forgot Password?</a>
+          </div>
         </div>
-        <button type="submit" class="btn btn-primary d-block">Login</button>
+        <!-- forgot password -->
+        <div class="d-grid gap-2">
+          <button class="btn btn-primary py-2 rounded-pill" type="submit">
+            Login
+          </button>
+        </div>
       </form>
     </div>
   </body>
